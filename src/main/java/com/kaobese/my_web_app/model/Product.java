@@ -1,7 +1,13 @@
 package com.kaobese.my_web_app.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.stereotype.Component;
 
+@Component
+@Entity
 public class Product {
+    @Id
     private int prodId;
     private String prodName;
     private int price;
@@ -11,6 +17,10 @@ public class Product {
         this.prodId = prodId;
         this.prodName = prodName;
         this.price = price;
+    }
+
+    public Product() {
+
     }
 
     public int getProdId() {
